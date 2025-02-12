@@ -1,0 +1,50 @@
+/* src/components/Hero.css */
+.hero {
+    background-color: #000;
+    text-align: center;
+    padding: 40px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-slide img {
+    /* border: 2px solid #00ff00; */
+    border-radius: 4px;
+  }
+  
+  .enter-email {
+    margin-top: 20px;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #697769; /* hacker green */
+  }
+  
+  .enter-email .bracket {
+    margin: 0 8px;
+  }
+
+.enter-email .bracket {
+    margin: 0 8px;
+}
+
+.email-input {
+    background: black;
+    border: none;
+    color: #697769;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    outline: none;
+    width: 200px;
+}
+
+.email-input::placeholder {
+    color: #697769;
+}

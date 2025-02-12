@@ -1,0 +1,8 @@
+/* src/index.css */
+body {
+  background-color: #000; /* black background */
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace; /* hacker-like font */
+}
