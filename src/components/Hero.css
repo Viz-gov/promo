@@ -12,6 +12,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 400px; /* Ensures uniform width */
+    margin: 0 auto; /* Ensures equal spacing */
+    padding: 0; /* Remove any padding that might be causing fluff */
+    box-sizing: border-box; /* Ensures padding doesn't add extra width */
   }
   
   .carousel-slide img {

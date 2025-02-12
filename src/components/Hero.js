@@ -39,7 +39,7 @@ const Hero = () => {
     speed: 1200,
     autoplay: true,
     autoplaySpeed: 2500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: '0px',
