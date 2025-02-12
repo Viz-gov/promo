@@ -1,55 +1,71 @@
 /* src/components/Hero.css */
 .hero {
-    background-color: #000;
-    text-align: center;
-    padding: 40px 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .carousel-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 400px; /* Ensures uniform width */
-    margin: 0 auto; /* Ensures equal spacing */
-    padding: 0; /* Remove any padding that might be causing fluff */
-    box-sizing: border-box; /* Ensures padding doesn't add extra width */
-  }
-  
-  .carousel-slide img {
-    /* border: 2px solid #00ff00; */
-    border-radius: 4px;
-  }
-  
-  .enter-email {
-    margin-top: 20px;
-    font-size: 24px;
-    font-family: 'Courier New', Courier, monospace;
-    color: #697769; /* hacker green */
-  }
-  
-  .enter-email .bracket {
-    margin: 0 8px;
-  }
+  position: relative;
+  background-color: #000;
+  text-align: center;
+  padding: 200px 0; /* Increased top padding to move everything down */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Make the starfield canvas cover the entire section */
+.starfield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Ensure carousel and email input are above the canvas */
+.carousel-slide, .enter-email {
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  margin-bottom: 200px; /* Adjust spacing between hero section and email */
+
+}
+
+.carousel-slide img {
+  border-radius: 4px;
+}
+
+.enter-email {
+  margin-top: 0px;
+  font-size: 24px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #697769;
+  margin-bottom: 0px;
+}
 
 .enter-email .bracket {
-    margin: 0 8px;
+  margin: 0 8px;
 }
 
 .email-input {
-    background: black;
-    border: none;
-    color: #697769;
-    font-size: 24px;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    outline: none;
-    width: 200px;
+  background: black;
+  border: none;
+  color: #697769;
+  font-size: 24px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  outline: none;
+  width: 200px;
 }
 
 .email-input::placeholder {
-    color: #697769;
+  color: #697769;
 }
