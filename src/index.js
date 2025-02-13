@@ -6,6 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
+if (1==1) {
+
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
