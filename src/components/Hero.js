@@ -43,6 +43,16 @@ const Hero = () => {
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: '0px',
+    responsive: [
+    {
+      breakpoint: 768, // when screen width is 768px or less
+      settings: {
+        slidesToShow: 1, // show one slide at a time on mobile
+        slidesToScroll: 1,
+        centerMode: false,
+      },
+    },
+  ],
   };
 
   const images = [
