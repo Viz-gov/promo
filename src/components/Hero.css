@@ -1,12 +1,16 @@
 /* src/components/Hero.css */
 .hero {
-    background-color: #000;
-    text-align: center;
-    padding: 40px 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  position: relative;       /* so the starfield can be absolutely positioned inside */
+  /* display: flex;           IMPORTANT: so flex-direction works */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;        /* fill the browser height */
+  margin: 0;
+  padding: 150px 0;              /* remove large top/bottom padding */
+  background-color: #000;
+  text-align: center;
+}
   
   .carousel-slide {
     display: flex;
@@ -37,9 +41,58 @@
     color: #697769; /* hacker green */
   }
   
-  .enter-email .bracket {
-    margin: 0 8px;
-  }
+.enter-email .bracket {
+  margin: 0 8px;
+  position: relative;
+  background-color: #000;
+  text-align: center;
+  padding: 100px 0; /* Increased top padding to move everything down */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Make the starfield canvas cover the entire section */
+.starfield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Ensure carousel and email input are above the canvas */
+.carousel-slide, .enter-email {
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  margin-bottom: 150px; /* Adjust spacing between hero section and email */
+
+}
+
+.carousel-slide img {
+  border-radius: 4px;
+}
+
+.enter-email {
+  margin-top: 0px;
+  font-size: 24px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #697769;
+  margin-bottom: 0px;
+}
 
 .enter-email .bracket {
   margin: 0 8px;
