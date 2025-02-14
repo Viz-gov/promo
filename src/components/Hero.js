@@ -138,7 +138,7 @@ const Hero = () => {
       settings: {
         slidesToShow: 1, // show one slide at a time on mobile
         slidesToScroll: 1,
-        centerMode: false,
+        centerMode: true,
       },
     },
   ],
@@ -173,7 +173,7 @@ const Hero = () => {
       <canvas ref={canvasRef} className="starfield"></canvas>
       
       {/* Background Music */}
-      <audio ref={audioRef} src="/background-music.mp3" loop />
+      <audio ref={audioRef} src="/bg_music.mp3" loop />
 
       <Slider {...settings}>
         {images.map((src, index) => (

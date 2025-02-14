@@ -1,4 +1,12 @@
 /* src/components/Hero.css */
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .hero {
   position: relative;       /* so the starfield can be absolutely positioned inside */
   /* display: flex;           IMPORTANT: so flex-direction works */
@@ -10,6 +18,7 @@
   padding: 150px 0;              /* remove large top/bottom padding */
   background-color: #000;
   text-align: center;
+  overflow-x: hidden;
 }
   
   .carousel-slide {
@@ -23,11 +32,8 @@
     box-sizing: border-box; /* Ensures padding doesn't add extra width */
   }
   
-  /* @media screen and (max-width: 768px) {
-    .carousel-slide {
-      max-width: 100%; 
-    }
-  }   */
+  @media (max-width: 768px) {
+  }  
 
   .carousel-slide img {
     /* border: 2px solid #00ff00; */
