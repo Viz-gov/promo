@@ -42,20 +42,20 @@
   }
 
 .enter-email .bracket {
-    margin: 0 8px;
+  margin: 0 8px;
 }
 
 .email-input {
-    background: black;
-    border: none;
-    color: #697769;
-    font-size: 24px;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    outline: none;
-    width: 200px;
+  background: black;
+  border: none;
+  color: #697769;
+  font-size: 24px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  outline: none;
+  width: 200px;
 }
 
 .email-input::placeholder {
-    color: #697769;
+  color: #697769;
 }
