@@ -96,28 +96,25 @@ const Hero = () => {
     document.addEventListener("click", playAudio);
     return () => document.removeEventListener("click", playAudio);
   }, []);
-  const handleEmailSubmit = async (e) => {
+
+const handleEmailSubmit = async (e) => {
     if (e.key === 'Enter' && email.trim() !== '') {
-      setSubmitted(true); // Replace input with "Sent."
+        setSubmitted(true); // Replace input with "Sent."
 
-      // Send email to backend
-      try {
-        const response = await fetch('http://localhost:5000/save-email', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-          },
-          body: JSON.stringify({ email }),
-          mode: 'cors' // Ensure CORS is enabled
-        });
+        try {
+            const response = await fetch('https://script.google.com/macros/s/AKfycbywlF_u2I2VJpuhtV2nVhWLeeatpZaucOqJmtcolaJGyEMZfiMrPN_qODZMym_gMXrypA/exec', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email }),
+                mode: 'no-cors' // 🚀 This bypasses CORS but removes response feedback
+            });
 
-        if (!response.ok) {
-          console.error('Failed to save email.');
+            console.log('Request sent');
+        } catch (error) {
+            console.error('Error saving email:', error);
         }
-      } catch (error) {
-        console.error('Error saving email:', error);
-      }
     }
   };
 
